@@ -1,0 +1,115 @@
+/* CSS Document */
+.jumbotron{
+	width:80%;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.form-control{
+	margin-bottom:10px;
+}
+
+.formulario{
+	width:235px;
+	margin:auto;
+	text-align:left;
+}
+
+.jumbotron h5{
+	margin-top: 5px;
+	padding-bottom: 1px;
+	padding-top: 5px;
+	color: #acacac;
+	border-radius: 5px;
+	text-align:left;
+	
+}
+
+.p{
+     margin-left: 565px;
+	 color: #acacac;
+	 border-radius: 5px;
+}
+
+.jumbotron logo{
+	 margin-top:30px;
+	 margin-bottom: 1px;
+	 padding-bottom: 1px;
+	 padding-top: 5px;
+}
+
+.text-center .img-responsive {
+    margin: 0 auto;
+	padding-top: 30px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-toggle{
+	margin-top: 5px;
+	padding-top: 5px;
+}
+
+.dropdown{
+	top: 50%;
+	
+	
+}
+
+.footer {
+	position:absolute;
+	bottom:0px;
+	width:100%;
+}
+
+.flex-caption {
+			  width: 100%;
+			  padding: 2%;
+			  left: 0;
+			  bottom: 0;
+			  background: rgba(0,0,0,.5);
+			  color: #fff;
+			  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+			  font-size: 12px;
+			  line-height: 18px;
+			  margin:0;
+			}
+
+.rodape {
+   
+   color: #999;	
+   bottom:0;
+   width:100%;
+   height:90px;   /* Mesma Altura do Rodapé */
+   background:#222;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #999;
+	}
+a:hover {
+	text-decoration: underline; 
+	color: #000;
+	}
+a:active {
+	text-decoration: none;
+	}
+
+
+

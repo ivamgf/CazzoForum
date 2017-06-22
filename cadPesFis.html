@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt-br">
+    <head>
+        <title>Cadastro de Pessoa Física</title>
+        
+        <!-- Bloco de Meta -->
+	     <meta charset="utf-8"></meta>
+		 <meta name="viewport" content="width=device-width, user-scalable=no, 
+		 intial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		 <!-- Bloco de Meta -->
+		 
+		 <!-- Bloco de Link -->
+		 
+		 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		 <link rel="stylesheet" type="text/css" href="/css/styleCadPesFis.css">
+		 <!-- Bloco de Link -->
+		 
+		 <!-- Bloco de Script -->
+		 <script src="angular/angular.min.js"></script>
+		 <script src="angular/angular-locale_pt-br.js"></script>         
+                 <script src="bootstrap/js/jquery.min.js"></script>
+                 <script src="bootstrap/js/bootstrap.min.js"></script>
+                 
+        
+    </head>
+    <body>
+	     <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="cadPesFis.html">NOVO</a></li>
+      <li><a href="atualPesFis.html">EDITAR</a></li>
+      <li><a href="consPesFis.php">CONSULTAS</a></li>
+      <li><a href="delPesFis.html">EXCLUIR</a></li>
+    </ul>
+  </div>
+</nav>
+        <div class="container">
+            <div class="jumbotron">
+			<div class="text-center"><p><h3>CADASTRO DE PESSOA FÍSICA</h3></p></div>
+			 <!-- Tabela -->
+			
+			<table class="table">
+			   <div class="container col-xs-3 col-sm-3 col-md-12 col-lg-12 text-center">
+                <form class="formulario" 
+                method="post" action="cadPesFis.php">
+				
+				 <!-- Linha 1.1 -->
+				
+				<tr>
+				     <th>Nome</th><th>Nome Social</th><th>Data de Nascimento</th>
+					
+				</tr>
+				
+				<!-- Linha 1.1 -->
+				
+				<!-- Linha 1.2 -->
+				
+                <tr>
+                
+                     <td>
+                  <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
+                  <input class="form-control" type="text" name="nome_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                         <input class="form-control" type="text" name="nomeSocial_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                         <input class="form-control" type="date" name="dtNascimento_tpf" id="campoData">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.2 -->
+				
+				
+				<!-- Linha 1.3 -->
+				
+				<tr>
+				     <th>Data de Admissão</th><th>Endereço</th><th>CPF</th>
+					
+				</tr>
+				
+				<!-- Linha 1.3 -->
+				
+				<!-- Linha 1.4 -->
+				
+                <tr>
+                
+                     <td>
+                  <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>					 
+                  <input class="form-control" type="date" name="dtAdmissao_tpf" id="campoData">
+				     </div>
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                         <input class="form-control" type="text" name="end_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+                         <input class="form-control" type="number" name="cpf_tpf" id="campoCpf">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.4 -->
+				
+				<!-- Linha 1.5 -->
+				
+				<tr>
+				     <th>RG</th><th>Telefone Residencial</th><th>Celular</th>
+					
+				</tr>
+				
+				<!-- Linha 1.5 -->
+				
+				<!-- Linha 1.6 -->
+				
+                <tr>
+                
+                     <td>
+                  <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>					 
+                  <input class="form-control" type="number" name="rg_tpf" id="campoRg">
+				     </div>
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                         <input class="form-control" type="number" name="telRes_tpf" id="campoTelefone">
+				     </div>
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                         <input class="form-control" type="number" name="telCel_tpf" id="campoTelefone">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.6 -->
+				
+				<!-- Linha 1.7 -->
+				
+				<tr>
+				     <th>Telefone Comercial</th><th>Ramal</th><th>Endereço Comercial</th>
+					
+				</tr>
+				
+				<!-- Linha 1.7 -->
+				
+				<!-- Linha 1.8 -->
+				
+                <tr>
+                
+                     <td>
+                  <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>					 
+                  <input class="form-control" type="number" name="telCom_tpf" id="campoTelefone">
+				     </div>
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                         <input class="form-control" type="number" name="ramal_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                         <input class="form-control" type="text" name="endCom_tpf">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.8-->
+				
+				<!-- Linha 1.9 -->
+				
+				<tr>
+				     <th>Cidade</th><th>Sexo</th><th>Cargo</th>
+					
+				</tr>
+				
+				<!-- Linha 1.9 -->
+				
+				<!-- Linha 1.10 -->
+				
+                <tr>
+                
+                     <td>
+                     
+                     <div class="input-group"><span class="input-group-addon">
+				  <i class="glyphicon glyphicon-globe"></i></span>
+				         <select class="form-control" name="codCid_tpf">
+				             <option value="0">---</option>
+                             <option value="1">Rio Branco</option>
+                             <option value="2">Maceió</option>
+                             <option value="3">Macapá</option>
+                             <option value="4">Manaus</option>
+                             <option value="5">Salvador</option>
+                             <option value="6">Fortaleza</option>
+                             <option value="7">Brasília</option>
+                             <option value="8">Vitória</option>
+                             <option value="9">Goiânia</option>
+                             <option value="10">São Luiz</option>
+                             <option value="11">Cuiabá</option>
+                             <option value="12">Campo Grande</option>                             
+                             <option value="13">Belo Horizonte</option>
+                             <option value="14">Belém</option>
+                             <option value="15">João Pessoa</option>
+                             <option value="16">Curitiba</option>
+                             <option value="17">Recife</option>
+                             <option value="18">Terezina</option>
+                             <option value="19">Rio de Janeiro</option>
+                             <option value="20">Natal</option>
+                             <option value="21">Porto Alegre</option>
+                             <option value="22">Porto Velho</option>
+                             <option value="23">Boa Vista</option>
+                             <option value="24">Florianópolis</option>
+                             <option value="25">São Paulo</option>
+                             <option value="26">Aracajú</option>
+                             <option value="27">Palmas</option>
+                             <option value="28">Outros</option>
+                         </select>
+						 </div>
+                     
+                  
+					 </td>
+					 <td>
+					 
+					 <div class="input-group"><span class="input-group-addon">
+				  <i class="glyphicon glyphicon-exclamation-sign"></i></span>
+				         <select class="form-control" name="codSex_tpf">
+				             <option value="0">---</option>
+                             <option value="1">Masculino</option>
+                             <option value="2">Feminino</option>
+                             <option value="3">Outros</option>
+                         </select>
+						 </div>
+					 
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-object-align-vertical"></i></span>
+                         <input class="form-control" type="text" name="cargo_tpf">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.10-->
+				
+				<!-- Linha 1.11 -->
+				
+				<tr>
+				     <th>Função</th><th>Observação</th><th>E-Mail</th>
+					
+				</tr>
+				
+				<!-- Linha 1.11 -->
+				
+				<!-- Linha 1.12 -->
+				
+                <tr>
+                
+                     <td>
+                     
+                     <div class="input-group"><span class="input-group-addon">
+				  <i class="glyphicon glyphicon-object-align-vertical"></i></span>
+				         <select class="form-control" name="funcao_tpf">
+				             <option value="0">---</option>
+                             <option value="1">Técnico</option>
+                             <option value="2">Administrador</option>
+                             <option value="3">Engenheiro</option>
+                             <option value="4">Cronometrista</option>
+                             <option value="5">Operador</option>
+                             <option value="6">Outros</option>
+                         </select>
+						 </div>
+                     
+                 
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
+                         <input class="form-control" type="text" name="obs_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                         <input class="form-control" type="text" name="email_tpf">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.12-->
+				
+				<!-- Linha 1.13 -->
+				
+				<tr>
+				     <th>Rede Social</th><th>Site</th><th>CEP</th>
+					
+				</tr>
+				
+				<!-- Linha 1.13 -->
+				
+				<!-- Linha 1.14 -->
+				
+                <tr>
+                
+                     <td>
+                  <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>					 
+                  <input class="form-control" type="text" name="redeSocial_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
+                         <input class="form-control" type="text" name="site_tpf">
+				     </div>
+					 </td>
+					 <td>
+					 
+                  <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                         <input class="form-control" type="number" name="cep_tpf" id="campoCep">
+				     </div>
+				     </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.14-->
+
+				
+				<!-- Linha 2 -->
+				
+                <tr>
+                     <td>				
+                         <input type="submit" class="form-control btn btn-success btn-block" 
+                         value="Cadastrar">
+				  
+				    </td>
+				    <td>
+				         <input type="reset" class="btn btn-primary btn-block btn-danger"
+			             value="Limpar campos"> 
+				     </td>
+					 <td>
+				        
+					 </td>
+					
+			 </tr>
+                    
+                
+                <!-- Linha 2 -->
+				
+				
+				
+            </form>
+            
+            
+			     </div>
+			   </table>
+			   
+			    <!-- Tabela -->
+			   
+            </div>               
+        </div>
+     <script>
+jQuery(function($){
+$("#campoData").mask("99/99/9999");
+$("#campoTelefone").mask("(999) 999-9999");
+$("#campoCpf").mask("***.***.***/**");
+$("#campoRG").mask("*.***.***");
+$("#campoCep").mask("*****-***");
+});
+</script>   
+    
+    </body>
+</html>
