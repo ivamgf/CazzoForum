@@ -5,10 +5,10 @@
 <!-- Data: 21/06/2017 -->
 <!-- Data de atualização: -->
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="controllerLogin">
     <head>
 	     <!-- Bloco de Título -->
-	     <title>Quem Somos</title>
+	     <title>Login Aluno</title>
 		 <!-- Bloco de Título -->
 		 
 		 <!-- Bloco de Meta -->
@@ -32,13 +32,26 @@
          <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
-		 <!-- Bloco de Script -->         
+		 <!-- Bloco de Script -->      
+		 
+		 <!-- Bloco de código Angular Js -->
+         <script>
+		     angular.module("controllerLogin", []);
+			 angular.module("controllerLogin").controller("controllerLogin",
+			 function ($scope){
+			     $scope.app="controllerLogin";
+				 $scope.usuarios = [{usuario:"admin", senha:"password"}];
+             });
+		 </script>
+		 <!-- Bloco de código Angular Js -->
+	 
+	     <!-- Bloco de Script -->		 
 		 
 	</head>
-	<body>
+	<body ng-app="controllerLogin" ng-controller="controllerLogin">
 	 <!-- Bloco de código --> 
-	 
-	     <!-- Bloco de código nav  -->
+	     
+		 <!-- Bloco de código nav  -->
 			<nav class="navbar navbar-inverse">
 			  <div class="container-fluid">
 				<div class="navbar-header">
@@ -83,34 +96,46 @@
 			  </div>		  
 			 </nav>
          <!-- Bloco de código nav  -->  
-        		 
-         
+	              
          <!-- Bloco de código do Jumbotron  -->	
              <div class="container">
 				  <div class="jumbotron">
 					<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-					
-					 <div class="container">
-					     <div class="well"><h3>Quem Somos</h3></div>
-					 </div>
-					 
-					 <div class="container">
-					     <div class="well">
-						     <p>
-							 A CazzoFórum é uma plataforma EAD para estudos on-line. 
-							 Nela você pode adquirir e acessar diversos cursos sobre os mais variados assuntos. 
-							 Na CazzoFórum você também pode se tornar um instrutor, publicar seus cursos e começar lucrar imediatamente.
-                             Acesse agora e experimente a mais nova plataforma EAD!
-							 </p>
-							 <p><br><br><br><br><br><br><br></p>
-						 </div>
-					 </div>
-					 
-				  </div>
+					<!-- Bloco de código de formulário -->	
+						 <!-- Bloco de Div com códigos Angular JS -->		 
+						 <div>	 
+							 <form class="formulario" name="formLogin" method="post" action="userauthentication.php">
+								 <div><h5>Usuário</h5></div>
+								 <input class="form-control" name="usuario_usu" type="text" ng-model="usuario.usuario"
+								 placeholder="Digite aqui o seu Usuário!" ng-required="true">
+								 <div><h5>Senha</h5></div>
+								 <input class="form-control" name="password_usu" type="password" ng-model="usuario.senha"
+								 placeholder="Digite sua Senha de 8 Dígitos!">
+							 
+							 <!-- Bloco de código de formulário -->	 
+							 
+							 <!-- Bloco de código de botão usando Angular JS-->
+							<br> 
+							 <input type="submit" class="btn btn-primary btn-block btn-success"
+							 ng-disabled="!usuario.usuario" value="Fazer Login">
+							 <br>
+							<input type="reset" class="btn btn-primary btn-block btn-danger"
+							value="Limpar campos">
+                             <!-- Bloco de código de Link -->
+							 <br>
+							 <div class="link text-center"><h5>Esqueci a senha!</h5></div>						 
+							 <!-- Bloco de código de Link -->							
+							 </form>
+							 <!-- Bloco de código de botão usando Angular JS-->
+							 </div>
+							 <!-- Bloco de Div com códigos Angular JS -->
+							 
+						</div>
+				</div>
 			 </div>
          <!-- Bloco de código do Jumbotron  -->		 
-		
+		 
 		 <!-- Bloco de código do Rodapé  -->	
 		                
 			<div class="rodape">
@@ -125,8 +150,8 @@
 					 <p class="navbar-text navbar-right"><i>Powered By PHP, MySql, HTML5, Bootstrap.</i></p>
 			     </div>
 			</div>
-		 <!-- Bloco de código do Rodapé  -->	
-		 
+		 <!-- Bloco de código do Rodapé  -->
+		
 		 <!-- jQuery -->
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 			<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">x3C/script>')</script>

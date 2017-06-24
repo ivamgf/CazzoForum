@@ -5,10 +5,10 @@
 <!-- Data: 21/06/2017 -->
 <!-- Data de atualização: -->
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="controllerLogin">
     <head>
 	     <!-- Bloco de Título -->
-	     <title>Quem Somos</title>
+	     <title>Login Instrutor</title>
 		 <!-- Bloco de Título -->
 		 
 		 <!-- Bloco de Meta -->
@@ -32,13 +32,26 @@
          <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
-		 <!-- Bloco de Script -->         
+		 <!-- Bloco de Script -->      
+		 
+		 <!-- Bloco de código Angular Js -->
+         <script>
+		     angular.module("controllerLogin", []);
+			 angular.module("controllerLogin").controller("controllerLogin",
+			 function ($scope){
+			     $scope.app="controllerLogin";
+				 $scope.usuarios = [{usuario:"admin", senha:"password"}];
+             });
+		 </script>
+		 <!-- Bloco de código Angular Js -->
+	 
+	     <!-- Bloco de Script -->		 
 		 
 	</head>
-	<body>
+	<body ng-app="controllerLogin" ng-controller="controllerLogin">
 	 <!-- Bloco de código --> 
-	 
-	     <!-- Bloco de código nav  -->
+	     
+		 <!-- Bloco de código nav  -->
 			<nav class="navbar navbar-inverse">
 			  <div class="container-fluid">
 				<div class="navbar-header">
@@ -83,34 +96,90 @@
 			  </div>		  
 			 </nav>
          <!-- Bloco de código nav  -->  
-        		 
-         
-         <!-- Bloco de código do Jumbotron  -->	
-             <div class="container">
-				  <div class="jumbotron">
-					<h1><img src="imagens/logo.png" width="30%" /></h1> 
+	              
+         <div class="container">
+            <div class="jumbotron">
+			<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
+			<div class="text-center"><p><h3>CADASTRO DE ALUNO</h3></p></div>
+			 <!-- Tabela -->
+			
+			<table class="table">
+			   <div class="container col-xs-3 col-sm-3 col-md-12 col-lg-12 text-center">
+                <form class="formulario" 
+                method="post" action="cadPesFis.php">
+				
+				 <!-- Linha 1.1 -->
+				
+				<tr>
+				     <th>Nome</th><th>E-mail</th>
 					
-					 <div class="container">
-					     <div class="well"><h3>Quem Somos</h3></div>
-					 </div>
-					 
-					 <div class="container">
-					     <div class="well">
-						     <p>
-							 A CazzoFórum é uma plataforma EAD para estudos on-line. 
-							 Nela você pode adquirir e acessar diversos cursos sobre os mais variados assuntos. 
-							 Na CazzoFórum você também pode se tornar um instrutor, publicar seus cursos e começar lucrar imediatamente.
-                             Acesse agora e experimente a mais nova plataforma EAD!
-							 </p>
-							 <p><br><br><br><br><br><br><br></p>
+				</tr>
+				
+				<!-- Linha 1.1 -->
+				
+				<!-- Linha 1.2 -->
+				
+                <tr>
+                
+                     <td>
+						 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
+						     <input class="form-control" type="text" name="nome_cpf">
+				         </div>
+					 </td>
+					 <td>					 
+						 <div class="input-group">
+							 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+							 <input class="form-control" type="text" name="email_cpf" id="campoEmail">
 						 </div>
-					 </div>
+				     </td>
 					 
-				  </div>
-			 </div>
-         <!-- Bloco de código do Jumbotron  -->		 
-		
+				</tr>
+				
+				<!-- Linha 1.2 -->	
+				
+							
+				<tr>
+				     <th>Usuário</th><th>Senha</th><th></th>
+					
+				</tr>
+				
+				<!-- Linha 1.11 -->
+				
+				<!-- Linha 1.12 -->
+				
+                <tr>
+                
+                     <td>
+						 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
+						     <input class="form-control" type="text" name="usuario_cpf" id="campoUsuario">
+				         </div>
+					 </td>
+					 <td>
+					 <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-ok-sign"></i></span>
+                         <input class="form-control" type="text" name="senha_cpf" id="campoSenha">
+				     </div>
+					 </td>
+					 
+				</tr>
+				
+				<!-- Linha 1.12-->
+				
+				<!-- Linha 1.13 -->			             
+                
+                <!-- Linha 2 -->				
+            </form>      
+            
+			     </div>
+			   </table>
+			   
+			    <!-- Tabela -->
+			   
+            </div> 
+             <p><br><br><br><br><br></p>			
+        </div>	 
+		 
 		 <!-- Bloco de código do Rodapé  -->	
 		                
 			<div class="rodape">
@@ -125,8 +194,8 @@
 					 <p class="navbar-text navbar-right"><i>Powered By PHP, MySql, HTML5, Bootstrap.</i></p>
 			     </div>
 			</div>
-		 <!-- Bloco de código do Rodapé  -->	
-		 
+		 <!-- Bloco de código do Rodapé  -->
+		
 		 <!-- jQuery -->
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 			<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">x3C/script>')</script>
