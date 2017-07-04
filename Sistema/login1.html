@@ -1,0 +1,123 @@
+<!-- Programa: Homepage da plataforma EAD CazzoFórum-->
+<!-- Descrição: Página inicial do sistema CazzoFórum -->
+<!-- Versão: 1.0 -->
+<!-- Autor: Ivam Galvão Filho -->
+<!-- Data: 21/06/2017 -->
+<!-- Data de atualização: -->
+<!doctype html>
+<html lang="pt-br" ng-app="controllerLogin">
+    <head>
+	     <!-- Bloco de Título -->
+	     <title>CazzoFórum</title>
+		 <!-- Bloco de Título -->
+		 
+		 <!-- Bloco de Meta -->
+	     <meta charset="utf-8"></meta>
+		 <meta name="viewport" content="width=device-width, user-scalable=no, 
+		 intial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		 <!-- Bloco de Meta -->
+		 
+		 <!-- Bloco de Link -->
+		 <!-- Favicon --><link rel="shortcut icon" href="imagens/favicon.png" /><!-- Favicon -->
+		 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		 <link rel="stylesheet" type="text/css" href="css/style.css">
+		 <!-- Link FlexSlider --->
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/base.less">
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/font.less">
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/mixins.less">
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/resets.less">
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/responsive.less">
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/theme.less">
+		 <link rel="stylesheet" type="text/css" href="flexslider/css/variables.less">
+		 
+		 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+		 <!-- Link FlexSlider --->
+		 <!-- Bloco de Link -->
+		 
+		 <!-- Bloco de Script -->
+		 <script src="angular/angular.min.js"></script>         
+         <script src="bootstrap/js/jquery.min.js"></script>
+         <script src="bootstrap/js/bootstrap.min.js"></script>
+		 <script src="jquery/jquery.min.js"></script>
+		 <script src="flexslider/jquery.flexslider.js"></script>		 
+		 <!-- Bloco de Script -->      
+		 
+		 <!-- Bloco de código Angular Js -->
+         <script>
+		     angular.module("controllerLogin", []);
+			 angular.module("controllerLogin").controller("controllerLogin",
+			 function ($scope){
+			     $scope.app="controllerLogin";
+				 $scope.usuarios = [{usuario:"admin", senha:"password"}];
+             });
+		 </script>
+		 <!-- Bloco de código Angular Js -->
+	 
+	     <!-- Bloco de Script -->		 
+		 
+	</head>
+	<body ng-app="controllerLogin" ng-controller="controllerLogin">
+	 <!-- Bloco de código --> 
+	 
+	              
+         <!-- Bloco de código do Jumbotron  -->	
+             <div class="container">
+				  <div class="jumbotron">
+					<h1><img src="imagens/logo.png" width="30%" /></h1> 
+					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
+					<!-- Bloco de código de formulário -->	
+						 <!-- Bloco de Div com códigos Angular JS -->		 
+						 <div>	 
+							 <form class="formulario" name="formLogin" method="post" action="userauthentication.php">
+								 <div><h5>Usuário</h5></div>
+								 <input class="form-control" name="usuario_usu" type="text" ng-model="usuario.usuario"
+								 placeholder="Digite aqui o seu Usuário!" ng-required="true">
+								 <div><h5>Senha</h5></div>
+								 <input class="form-control" name="password_usu" type="password" ng-model="usuario.senha"
+								 placeholder="Digite aqui sua Senha!">
+							 
+							 <!-- Bloco de código de formulário -->	 
+							 
+							 <!-- Bloco de código de botão usando Angular JS-->
+							<br> 
+							 <input type="submit" class="btn btn-primary btn-block btn-success"
+							 ng-disabled="!usuario.usuario" value="Fazer Login">
+							 <br>
+							<input type="reset" class="btn btn-primary btn-block btn-danger"
+							value="Limpar campos"> 
+							 </form>
+							 <!-- Bloco de código de botão usando Angular JS-->
+							 </div>
+							 <!-- Bloco de Div com códigos Angular JS -->
+							 
+							 <!-- Bloco de código de Link -->
+							 <div class="link"><h5>Esqueci a senha!</h5></div>
+						 </div>
+							 <!-- Bloco de código de Link -->
+				</div>
+			 </div>
+         <!-- Bloco de código do Jumbotron  -->		 
+		
+		 <!-- jQuery -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">x3C/script>')</script>
+
+			<!-- FlexSlider -->
+			<script defer src="js/jquery.flexslider.js"></script>
+			
+			<script>
+			 // Can also be used with $(document).ready()
+			 $(window).load(function() {
+				  $('.flexslider').flexslider({
+					animation: "slide"
+				  });
+				});
+			</script>
+			
+			<!-- FlexSlider -->
+			<!-- jQuery -->
+		 		 
+	 <!-- Bloco de código -->  	
+ 
+	</body>
+</html>
