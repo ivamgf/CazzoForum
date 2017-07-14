@@ -32,7 +32,15 @@
          <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
-		 <!-- Bloco de Script -->         
+		 <!-- Bloco de Script -->  
+                 
+                 <!-- Bloco de Style -->
+                 <style>
+		 .panel-body{
+                     height: 730px;
+                 }
+                 </style>
+                 <!-- Bloco de Style -->
 		 
 	</head>
 	<body>
@@ -79,6 +87,7 @@
 				  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastrar-se</a></li>
 				  <li><a href="loginInstrutor.html"><span class="glyphicon glyphicon-log-in"></span> Login de Instrutor</a></li>
 				  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                  <li><a href="sair.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 				</ul>
 			  </div>		  
 			 </nav>
@@ -99,7 +108,7 @@
 							     <div class="list-group">
 									  <a href="#" class="list-group-item disabled">Painel de Controle</a>
 									  <a href="dashboard1.html" class="list-group-item">Início</a>
-									  <a href="dashboardPerfil.html" class="list-group-item">Perfil</a>
+									  <a href="dashboardperfil.html" class="list-group-item">Perfil</a>
 									  <a href="dashcursos.html" class="list-group-item">Meus Cursos</a>
 									  <a href="dashcertificados.html" class="list-group-item">Meus Certificados</a>
 									  <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
@@ -114,8 +123,9 @@
                                                                                      <div class="container">
                                                                                          <h3>Deseja Realmente Sair do CazzoForum?</h3>
                                                                                      </div>
-                                                                                     <br>
+                                                                                     <br>                                                                                     
                                                                                      <div class="container">
+                                                                                         <form class="formulario" name="formLogout" method="post" action="close.php">
                                                                                          <div class="row">
                                                                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                                                                  <button type="submit" class="btn btn-danger">
@@ -123,6 +133,7 @@
                                                                                                  </button>
                                                                                              </div>
                                                                                          </div>
+                                                                                         </form>
                                                                                          <br>
                                                                                          <div class="row">
                                                                                              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
