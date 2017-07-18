@@ -22,14 +22,10 @@ function loginfailed(){
 <body>
 
 <?php
-//Bloco de código de conexão
-         $host="localhost";
-         $user="cazzo918_ead";
-     	 $pass="cf987456";
-     	 $dbname="cazzo918_system";
-         $link = mysqli_connect($host,$user,$pass) or die("Não foi possível realizar a conexão!");
-         mysqli_select_db($link, $dbname) or die("Não foi possível realizar a conexão2!");
-//Bloco de código de conexão
+//Bloco de código include
+include 'conexao.php';
+//Bloco de código include
+//
 //Bloco de código de conexão validação de usuário
 	 $usuario_usu=$_POST['usuario_usu'];
 	 $password_usu=$_POST['password_usu'];
