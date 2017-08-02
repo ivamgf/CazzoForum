@@ -1,9 +1,12 @@
+<?php session_start(); ?>
+
 <!-- Programa: Homepage da plataforma EAD CazzoFórum-->
 <!-- Descrição: Página inicial do sistema CazzoFórum -->
 <!-- Versão: 1.0 -->
 <!-- Autor: Ivam Galvão Filho -->
 <!-- Data: 21/06/2017 -->
 <!-- Data de atualização: -->
+
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -28,11 +31,11 @@
 		 
 		 <!-- Bloco de Script -->
 		 <script src="angular/angular.min.js"></script>         
-         <script src="bootstrap/js/jquery.min.js"></script>
-         <script src="bootstrap/js/bootstrap.min.js"></script>
+                 <script src="bootstrap/js/jquery.min.js"></script>
+                 <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
-		 <!-- Bloco de Script -->  
+		 <!-- Bloco de Script -->
                  
                  <!-- Bloco de Style -->
                  <style>
@@ -41,7 +44,6 @@
                  }
                  </style>
                  <!-- Bloco de Style -->
-		 
 	</head>
 	<body>
 	 <!-- Bloco de código --> 
@@ -86,7 +88,7 @@
 				  <li><a href="cadInstrutor.html"><span class="glyphicon glyphicon glyphicon-education"></span> Tornar-se Instrutor</a></li>
 				  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastrar-se</a></li>
 				  <li><a href="loginInstrutor.html"><span class="glyphicon glyphicon-log-in"></span> Login de Instrutor</a></li>
-				  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                                   <li><a href="sair.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 				</ul>
 			  </div>		  
@@ -99,7 +101,7 @@
 				  <div class="jumbotron">
 					<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-					
+                                        <p>Olá, <? echo $_SESSION['usuario_usu']; ?>!</p>
 					<!-- Bloco de código do Painel  -->
 					
 					<div class="container">
@@ -107,12 +109,12 @@
 						     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 							     <div class="list-group">
 									  <a href="#" class="list-group-item disabled">Painel de Controle</a>
-									  <a href="dashboard1.php" class="list-group-item">Início</a>
+									  <a href="dashboard1.html" class="list-group-item">Início</a>
 									  <a href="dashboardperfil.php" class="list-group-item">Perfil</a>
 									  <a href="dashcursos.php" class="list-group-item">Meus Cursos</a>
 									  <a href="dashcertificados.php" class="list-group-item">Meus Certificados</a>
 									  <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
-									  <a href="#" class="list-group-item">Sair</a>
+									  <a href="sair.html" class="list-group-item">Sair</a>
 								 </div>
 							 </div>
 							 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
@@ -120,27 +122,7 @@
 								     <div class="panel panel-default">
 										 <div class="panel-heading"><h5>Painel do Aluno</h5></div>
 										 <div class="panel-body">										     
-                                                                                     <div class="container">
-                                                                                         <h3>Deseja Realmente Sair do CazzoForum?</h3>
-                                                                                     </div>
-                                                                                     <br>                                                                                     
-                                                                                     <div class="container">
-                                                                                         <form class="formulario" name="formLogout" method="post" action="close.php">
-                                                                                         <div class="row">
-                                                                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                                                                 <button type="submit" class="btn btn-danger">
-                                                                                                     Sim
-                                                                                                 </button>
-                                                                                             </div>
-                                                                                         </div>
-                                                                                         </form>
-                                                                                         <br>
-                                                                                         <div class="row">
-                                                                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                                                                 <h5><a href="dashboard1.html">Voltar ao Painel de Controle</a></h5>
-                                                                                             </div>
-                                                                                         </div>                                                                                            
-                                                                                     </div>
+										     
 										 </div>
 									 </div>
 								 </div>
@@ -168,28 +150,10 @@
 					 <p class="navbar-text navbar-right"><i>Powered By PHP, MySql, HTML5, Bootstrap.</i></p>
 			     </div>
 			</div>
-		 <!-- Bloco de código do Rodapé  -->	
-		 
-		 <!-- jQuery -->
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">x3C/script>')</script>
-
-			<!-- FlexSlider -->
-			<script defer src="js/jquery.flexslider.js"></script>
-			
-			<script>
-			 // Can also be used with $(document).ready()
-			 $(window).load(function() {
-				  $('.flexslider').flexslider({
-					animation: "slide"
-				  });
-				});
-			</script>
-			
-			<!-- FlexSlider -->
-			<!-- jQuery -->
-		 		 
+		 <!-- Bloco de código do Rodapé  -->		 
+		 		 		 
 	 <!-- Bloco de código -->  	
  
 	</body>
 </html>
+

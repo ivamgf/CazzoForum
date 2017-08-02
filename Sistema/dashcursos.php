@@ -1,9 +1,11 @@
+<?php session_start(); ?>
 <!-- Programa: Homepage da plataforma EAD CazzoFórum-->
 <!-- Descrição: Página inicial do sistema CazzoFórum -->
 <!-- Versão: 1.0 -->
 <!-- Autor: Ivam Galvão Filho -->
 <!-- Data: 21/06/2017 -->
 <!-- Data de atualização: -->
+
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -99,7 +101,7 @@
 				  <div class="jumbotron">
 					<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-					
+					<p>Olá, <? echo $_SESSION['usuario_usu']; ?>!</p>
 					<!-- Bloco de código do Painel  -->
 					
 					<div class="container">
@@ -112,35 +114,30 @@
 									  <a href="dashcursos.php" class="list-group-item">Meus Cursos</a>
 									  <a href="dashcertificados.php" class="list-group-item">Meus Certificados</a>
 									  <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
-									  <a href="#" class="list-group-item">Sair</a>
+									  <a href="sair.html" class="list-group-item">Sair</a>
 								 </div>
 							 </div>
 							 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
 							     <div class="container">
 								     <div class="panel panel-default">
-										 <div class="panel-heading"><h5>Painel do Aluno</h5></div>
+										 <div class="panel-heading"><h5>Meus Cursos</h5></div>
 										 <div class="panel-body">										     
-                                                                                     <div class="container">
-                                                                                         <h3>Deseja Realmente Sair do CazzoForum?</h3>
-                                                                                     </div>
-                                                                                     <br>                                                                                     
-                                                                                     <div class="container">
-                                                                                         <form class="formulario" name="formLogout" method="post" action="close.php">
-                                                                                         <div class="row">
-                                                                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                                                                 <button type="submit" class="btn btn-danger">
-                                                                                                     Sim
-                                                                                                 </button>
-                                                                                             </div>
-                                                                                         </div>
-                                                                                         </form>
-                                                                                         <br>
-                                                                                         <div class="row">
-                                                                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                                                                 <h5><a href="dashboard1.html">Voltar ao Painel de Controle</a></h5>
-                                                                                             </div>
-                                                                                         </div>                                                                                            
-                                                                                     </div>
+										     <!-- Tabela -->
+											 <table class="table table-striped">
+												 <!-- Linha 1.1 -->
+												 <tr>
+												 <th>ID</th><th>Curso</th><th></th>
+												 </tr>
+												 <!-- Linha 1.1 -->
+												 
+												 <!-- Linha 1.2 -->
+												 <tr>
+												 <td></td><td></td><td><a href="dashboard3.html">Ir para o Curso</a></td>
+												 </tr>
+												 <!-- Linha 1.2 -->
+												 
+											 </table>
+											 <!-- Tabela -->
 										 </div>
 									 </div>
 								 </div>
@@ -193,3 +190,4 @@
  
 	</body>
 </html>
+
