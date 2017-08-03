@@ -114,6 +114,7 @@
 			         <a href="dashcursos.php" class="list-group-item">Meus Cursos</a>
 				 <a href="dashcertificados.php" class="list-group-item">Meus Certificados</a>
 				 <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
+                                 <a href="encerrar.php" class="list-group-item">Encerrar Conta</a>
 				 <a href="sair.html" class="list-group-item">Sair</a>  						  
 			</div>
 		     </div>
@@ -140,7 +141,7 @@
                                                             "SELECT id_aluno_cpf, st_nome_cpf, st_email_cpf, st_usuario_cpf, st_senha_cpf, "
                                                             . "nu_rg_cpf, nu_cpf_cpf, st_endereco_cpf, nu_cidade_cpf, dt_nascimento_cpf, "
                                                             . "st_sexo_cpf, nu_telefone_cpf, nu_celular_cpf, st_nomeSocial_cpf, st_obs_cpf "
-                                                            . "FROM cadPessoaFs_cpf where st_usuario_cpf = '$usuario_usu' ORDER BY id_aluno_cpf");
+                                                            . "FROM cadPessoaFs_cpf where st_usuario_cpf = '$usuario_usu' ");
                                                     while($row = mysqli_fetch_array($sql_consultar)){
                                                     $id_aluno_cpf = $row['id_aluno_cpf'];
                                                     $st_nome_cpf = $row['st_nome_cpf'];
@@ -229,7 +230,7 @@
 							   <span class="input-group-addon">
                                                                <i class="glyphicon glyphicon-lock"></i>
                                                            </span>
-                                                             <input class="form-control" type="text" name="st_senha_cpf" id="campoSenha" value="<?php echo $st_senha_cpf ?>">
+                                                             <input class="form-control" type="password" name="st_senha_cpf" id="campoSenha" value="<?php echo $st_senha_cpf ?>">
 							 </div>
 							 
 						     </td>

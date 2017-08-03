@@ -1,17 +1,14 @@
-<?php session_start(); ?>
-
 <!-- Programa: Homepage da plataforma EAD CazzoFórum-->
 <!-- Descrição: Página inicial do sistema CazzoFórum -->
 <!-- Versão: 1.0 -->
 <!-- Autor: Ivam Galvão Filho -->
 <!-- Data: 21/06/2017 -->
 <!-- Data de atualização: -->
-
 <!doctype html>
 <html lang="pt-br">
     <head>
 	     <!-- Bloco de Título -->
-	     <title>Painel do Aluno</title>
+	     <title>Atualização Realizada com Sucesso</title>
 		 <!-- Bloco de Título -->
 		 
 		 <!-- Bloco de Meta -->
@@ -24,7 +21,7 @@
 		 <!-- Favicon --><link rel="shortcut icon" href="imagens/favicon.png" /><!-- Favicon -->
 		 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		 <link rel="stylesheet" type="text/css" href="css/style.css">
-		 <!-- Link FlexSlider -->
+		 <!-- Link FlexSlider --->
 		 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 		 <!-- Link FlexSlider --->
 		 <!-- Bloco de Link -->
@@ -34,21 +31,26 @@
                  <script src="bootstrap/js/jquery.min.js"></script>
                  <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
-		 <script src="flexslider/jquery.flexslider.js"></script>		 
-		 <!-- Bloco de Script -->
+		 <script src="flexslider/jquery.flexslider.js"></script>
                  
-                 <!-- Bloco de Style -->
-                 <style>
-		 .panel-body{
-                     height: 730px;
-                 }
-                 </style>
-                 <!-- Bloco de Style -->
+                 <script type="text/javascript">
+                 //Script em JavaScript para redirecionar o usuário
+                 function redirection(){
+                        setTimeout("window.location='dashboard1.php' ", 5000);
+                 };
+                 //Script em JavaScript para redirecionar o usuário
+                 </script>
+         
+		 <!-- Bloco de Script -->      
+		 
+                 		  
+	     <!-- Bloco de Script -->		 
+		 
 	</head>
 	<body>
 	 <!-- Bloco de código --> 
-	 
-	     <!-- Bloco de código nav  -->
+	     
+		 <!-- Bloco de código nav  -->
 			<nav class="navbar navbar-inverse">
 			  <div class="container-fluid">
 				<div class="navbar-header">
@@ -86,57 +88,25 @@
 				</form>
 				<ul class="nav navbar-nav navbar-right">
 				  <li><a href="cadInstrutor.html"><span class="glyphicon glyphicon glyphicon-education"></span> Tornar-se Instrutor</a></li>
-				  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastrar-se</a></li>
+				  <li><a href="cadAluno.html"><span class="glyphicon glyphicon-user"></span> Cadastrar-se</a></li>
 				  <li><a href="loginInstrutor.html"><span class="glyphicon glyphicon-log-in"></span> Login de Instrutor</a></li>
-                                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                                  <li><a href="sair.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				  <li><a href="loginEad.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				</ul>
 			  </div>		  
 			 </nav>
          <!-- Bloco de código nav  -->  
-        		 
-         
-         <!-- Bloco de código do Jumbotron  -->	
-             <div class="container">
-				  <div class="jumbotron">
-					<h1><img src="imagens/logo.png" width="30%" /></h1> 
+	              
+         <div class="container">
+            <div class="jumbotron">
+                 <div class="panel-body">
+			<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-                                        <p>Olá, <? echo $_SESSION['usuario_usu']; ?>!</p>
-					<!-- Bloco de código do Painel  -->
-					
-					<div class="container">
-					     <div class="row">
-						     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-							     <div class="list-group">
-									  <a href="#" class="list-group-item disabled">Painel de Controle</a>
-									  <a href="dashboard1.php" class="list-group-item">Início</a>
-									  <a href="dashboardperfil.php" class="list-group-item">Perfil</a>
-									  <a href="dashcursos.php" class="list-group-item">Meus Cursos</a>
-									  <a href="dashcertificados.php" class="list-group-item">Meus Certificados</a>
-									  <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
-                                                                          <a href="encerrar.php" class="list-group-item">Encerrar Conta</a>
-									  <a href="sair.html" class="list-group-item">Sair</a>
-								 </div>
-							 </div>
-							 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-							     <div class="container">
-								     <div class="panel panel-default">
-										 <div class="panel-heading"><h5>Painel do Aluno</h5></div>
-										 <div class="panel-body">										     
-										     
-										 </div>
-									 </div>
-								 </div>
-							 </div>
-						 </div>
-					</div>
-					
-					<!-- Bloco de código do Painel  -->
-					 
-				  </div>
-			 </div>
-         <!-- Bloco de código do Jumbotron  -->		 
-		
+			<div class="text-center"><p><h3>ATUALIZAÇÃO REALIZADA COM SUCESSO!</h3></p></div>		
+                 </div>	   
+            </div> 
+             <p><br><br><br><br><br><br><br><br></p>			
+        </div>	 
+		 <script>redirection();</script>; 
 		 <!-- Bloco de código do Rodapé  -->	
 		                
 			<div class="rodape">
@@ -151,10 +121,12 @@
 					 <p class="navbar-text navbar-right"><i>Powered By PHP, MySql, HTML5, Bootstrap.</i></p>
 			     </div>
 			</div>
-		 <!-- Bloco de código do Rodapé  -->		 
-		 		 		 
+		 <!-- Bloco de código do Rodapé  -->	        
+                 
+                   
+                 
+                 
 	 <!-- Bloco de código -->  	
  
 	</body>
 </html>
-

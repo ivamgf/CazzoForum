@@ -114,6 +114,7 @@
 									  <a href="dashcursos.php" class="list-group-item">Meus Cursos</a>
 									  <a href="dashcertificados.php" class="list-group-item">Meus Certificados</a>
 									  <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
+                                                                          <a href="encerrar.php" class="list-group-item">Encerrar Conta</a>
 									  <a href="sair.html" class="list-group-item">Sair</a>
 								 </div>
 							 </div>
