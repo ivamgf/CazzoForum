@@ -11,7 +11,7 @@ and open the template in the editor.
         <title>Atualização de Perfil de Aluno</title>
         <script type="text/javascript">
          //Script em JavaScript para usuário cadastrado com sucesso
-         function cadsucessfully(){
+         function atualsucessfully(){
                  setTimeout("window.location='atualSuc.html' ", 1000);
          };
          //Script em JavaScript para usuário atualizado com sucesso
@@ -32,7 +32,7 @@ and open the template in the editor.
      $nu_rg_cpf = $_POST['nu_rg_cpf'];      
      $nu_cpf_cpf = $_POST['nu_cpf_cpf'];     
      $st_endereco_cpf = $_POST['st_endereco_cpf'];
-     $nu_cidade_cpf = $_POST['nu_cidade_cpf'];     
+     $st_cidade_cpf = $_POST['st_cidade_cpf'];     
      $dt_nascimento_cpf = $_POST['dt_nascimento_cpf'];      
      $st_sexo_cpf = $_POST['st_sexo_cpf'];
      $nu_telefone_cpf = $_POST['nu_telefone_cpf'];
@@ -49,7 +49,7 @@ and open the template in the editor.
             nu_rg_cpf = '$nu_rg_cpf', 
             nu_cpf_cpf = '$nu_cpf_cpf', 
             st_endereco_cpf = '$st_endereco_cpf',
-            nu_cidade_cpf = '$nu_cidade_cpf', 
+            st_cidade_cpf = '$st_cidade_cpf', 
             dt_nascimento_cpf = '$dt_nascimento_cpf', 
             st_sexo_cpf = '$st_sexo_cpf', 
             nu_telefone_cpf = '$nu_telefone_cpf', 
@@ -62,7 +62,7 @@ and open the template in the editor.
     ?>
         
         <?php
-        echo "<script>cadsucessfully()</script>";
+        echo "<script>atualsucessfully()</script>";
         ?>
     </body>
 </html>

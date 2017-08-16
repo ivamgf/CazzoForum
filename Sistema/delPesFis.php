@@ -10,7 +10,14 @@ and open the template in the editor.
         <meta charset="UTF-8">
        
         <title>Exclusão de Conta</title>
-        
+        <script type="text/javascript">
+         //Script em JavaScript para usuário cadastrado com sucesso
+         function delsucessfully(){
+                 setTimeout("window.location='delSuc.html' ", 1000);
+         };
+         //Script em JavaScript para usuário atualizado com sucesso
+         </script>
+         
     </head>
     <body>
         <?php
@@ -34,9 +41,11 @@ and open the template in the editor.
     //Código de exclusão
 //Bloco de código de exclusão de máquinas	
         ?>
+        
         <?php
-        header("Location: index.html");
-?>
+        echo "<script>delsucessfully()</script>";
+        ?>
+        
     </body>
 </html>
 

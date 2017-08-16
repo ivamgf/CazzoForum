@@ -139,7 +139,7 @@
                                                     $usuario_usu=$_SESSION['usuario_usu'];                                                    
                                                     $sql_consultar = mysqli_query($link, 
                                                             "SELECT id_aluno_cpf, st_nome_cpf, st_email_cpf, st_usuario_cpf, st_senha_cpf, "
-                                                            . "nu_rg_cpf, nu_cpf_cpf, st_endereco_cpf, nu_cidade_cpf, dt_nascimento_cpf, "
+                                                            . "nu_rg_cpf, nu_cpf_cpf, st_endereco_cpf, st_cidade_cpf, dt_nascimento_cpf, "
                                                             . "st_sexo_cpf, nu_telefone_cpf, nu_celular_cpf, st_nomeSocial_cpf, st_obs_cpf "
                                                             . "FROM cadPessoaFs_cpf where st_usuario_cpf = '$usuario_usu' ");
                                                     while($row = mysqli_fetch_array($sql_consultar)){
@@ -151,7 +151,7 @@
                                                     $nu_rg_cpf = $row['nu_rg_cpf'];
                                                     $nu_cpf_cpf = $row['nu_cpf_cpf'];
                                                     $st_endereco_cpf = $row['st_endereco_cpf'];
-                                                    $nu_cidade_cpf = $row['nu_cidade_cpf'];
+                                                    $st_cidade_cpf = $row['st_cidade_cpf'];
                                                     $dt_nascimento_cpf = $row['dt_nascimento_cpf'];                                                    
                                                     $st_sexo_cpf = $row['st_sexo_cpf'];
                                                     $nu_telefone_cpf = $row['nu_telefone_cpf'];

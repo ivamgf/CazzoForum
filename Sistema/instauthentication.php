@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
 <head>
 <title>Autenticando o usuário</title>
@@ -6,13 +7,13 @@
 <script type="text/javascript">
 //Script em JavaScript para usuário autenticado com sucesso
 function loginsucessfully(){
-	 setTimeout("window.location='dashboard2.html' ", 1000);
+	 setTimeout("window.location='dashboard2.php' ", 1000);
 };
 //Script em JavaScript para usuário autenticado com sucesso
 
 //Script em JavaScript para usuário não autenticado
 function loginfailed(){
-	 setTimeout("window.location='index.html' ", 1000);
+	 setTimeout("window.location='index.php' ", 1000);
 };
 //Script em JavaScript para usuário não autenticado
 </script>
@@ -34,7 +35,6 @@ include 'conexao.php';
          $row=mysqli_num_rows($sql);
 //Bloco de código de desvio de fluxo que verifica número de linhas de registro de usuário	
 	  if($row>0){
-		 session_start();
 		 $_SESSION['usuario2_usu']=$_POST['usuario2_usu'];
 		 $_SESSION['password2_usu']=$_POST['password2_usu'];
 		 echo "Você foi autenticado com sucesso!";
