@@ -16,11 +16,11 @@ and open the template in the editor.
         
 //Bloco de código de conexão
          $host="localhost";
-         $user="texkrono_tks";
-     	 $pass="tks987456";
-     	 $dbname="texkrono_texkronos_tks";
-         $conexao = mysql_connect($host,$user,$pass) or die("Não foi possível realizar a conexão!");
-         mysql_select_db($dbname)or die("Não foi possível realizar a conexão2!");
+         $user="cazzo918_ead";
+     	 $pass="cf987456";
+     	 $dbname="cazzo918_system";
+         $link = mysqli_connect($host,$user,$pass) or die("Não foi possível realizar a conexão!");
+         mysqli_select_db($link, $dbname) or die("Não foi possível realizar a conexão2!");
 //Bloco de código de conexão
 ?>
 </body>

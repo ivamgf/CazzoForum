@@ -1,9 +1,12 @@
+<?php session_start(); ?>
+
 <!-- Programa: Homepage da plataforma EAD CazzoFórum-->
 <!-- Descrição: Página inicial do sistema CazzoFórum -->
 <!-- Versão: 1.0 -->
 <!-- Autor: Ivam Galvão Filho -->
 <!-- Data: 21/06/2017 -->
 <!-- Data de atualização: -->
+
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -28,12 +31,19 @@
 		 
 		 <!-- Bloco de Script -->
 		 <script src="angular/angular.min.js"></script>         
-         <script src="bootstrap/js/jquery.min.js"></script>
-         <script src="bootstrap/js/bootstrap.min.js"></script>
+                 <script src="bootstrap/js/jquery.min.js"></script>
+                 <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
-		 <!-- Bloco de Script -->         
-		 
+		 <!-- Bloco de Script -->
+                 
+                 <!-- Bloco de Style -->
+                 <style>
+		 .panel-body{
+                     height: 730px;
+                 }
+                 </style>
+                 <!-- Bloco de Style -->
 	</head>
 	<body>
 	 <!-- Bloco de código --> 
@@ -78,7 +88,8 @@
 				  <li><a href="cadInstrutor.html"><span class="glyphicon glyphicon glyphicon-education"></span> Tornar-se Instrutor</a></li>
 				  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Cadastrar-se</a></li>
 				  <li><a href="loginInstrutor.html"><span class="glyphicon glyphicon-log-in"></span> Login de Instrutor</a></li>
-				  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                  <li><a href="sair.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 				</ul>
 			  </div>		  
 			 </nav>
@@ -88,9 +99,9 @@
          <!-- Bloco de código do Jumbotron  -->	
              <div class="container">
 				  <div class="jumbotron">
-					<h1><img src="imagens/logo.jpg" width="30%" /></h1> 
+					<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-					
+                                        <p><? echo $usuario_usu ?></p>
 					<!-- Bloco de código do Painel  -->
 					
 					<div class="container">
@@ -99,11 +110,11 @@
 							     <div class="list-group">
 									  <a href="#" class="list-group-item disabled">Painel de Controle</a>
 									  <a href="dashboard1.html" class="list-group-item">Início</a>
-									  <a href="dashboardPerfil.html" class="list-group-item">Perfil</a>
+									  <a href="dashboardperfil.php" class="list-group-item">Perfil</a>
 									  <a href="dashcursos.html" class="list-group-item">Meus Cursos</a>
 									  <a href="dashcertificados.html" class="list-group-item">Meus Certificados</a>
 									  <a href="catalogo.html" class="list-group-item">Catálogo de Cursos</a>
-									  <a href="#" class="list-group-item">Sair</a>
+									  <a href="sair.html" class="list-group-item">Sair</a>
 								 </div>
 							 </div>
 							 <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">

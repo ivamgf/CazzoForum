@@ -13,8 +13,7 @@
 		 
 		 <!-- Bloco de Meta -->
 	     <meta charset="utf-8"></meta>
-		 <meta name="viewport" content="width=device-width, user-scalable=no, 
-		 intial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		 <meta name="viewport" content="width=device-width, user-scalable=no, intial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		 <!-- Bloco de Meta -->
 		 
 		 <!-- Bloco de Link -->
@@ -28,20 +27,20 @@
 		 
 		 <!-- Bloco de Script -->
 		 <script src="angular/angular.min.js"></script>         
-         <script src="bootstrap/js/jquery.min.js"></script>
-         <script src="bootstrap/js/bootstrap.min.js"></script>
+                 <script src="bootstrap/js/jquery.min.js"></script>
+                 <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
 		 <!-- Bloco de Script -->      
 		 
 		 <!-- Bloco de código Angular Js -->
-         <script>
+                 <script>
 		     angular.module("controllerLogin", []);
 			 angular.module("controllerLogin").controller("controllerLogin",
 			 function ($scope){
 			     $scope.app="controllerLogin";
 				 $scope.usuarios = [{usuario:"admin", senha:"password"}];
-             });
+                 });
 		 </script>
 		 <!-- Bloco de código Angular Js -->
 	 
@@ -55,27 +54,12 @@
 			<nav class="navbar navbar-inverse">
 			  <div class="container-fluid">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html">CazzoForum</a>
+				  <a class="navbar-brand" href="index.php">CazzoForum</a>
 				</div>
 				<ul class="nav navbar-nav">
-				  <li class="active"><a href="index.html">Página Principal</a></li>
+				  <li class="active"><a href="index.php">Página Principal</a></li>
 				  				  
-				  <li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Categorias
-					<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="#">Administração</a></li>
-					  <li><a href="#">Desenvolvimento</a></li>
-					  <li><a href="#">Educação</a></li>
-					  <li><a href="#">Informática</a></li>
-					  <li><a href="#">Música</a></li>
-					  <li><a href="#">Negócios</a></li>
-					  <li><a href="#">Religião</a></li>
-					  <li><a href="#">Saúde e Fitness</a></li>
-					  <li><a href="#">Outros</a></li>
-					</ul>
-				  </li>
-				  
+				  			  
 				</ul>
 				<form class="navbar-form navbar-left">
 				  <div class="input-group">
@@ -99,41 +83,41 @@
 	              
          <!-- Bloco de código do Jumbotron  -->	
              <div class="container">
-				  <div class="jumbotron">
-					<h1><img src="imagens/logo.jpg" width="30%" /></h1> 
-					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-					<!-- Bloco de código de formulário -->	
-						 <!-- Bloco de Div com códigos Angular JS -->		 
-						 <div>	 
-							 <form class="formulario" name="formLogin" method="post" action="userauthentication.php">
-								 <div><h5>Usuário</h5></div>
-								 <input class="form-control" name="usuario_usu" type="text" ng-model="usuario.usuario"
-								 placeholder="Digite aqui o seu Usuário!" ng-required="true">
-								 <div><h5>Senha</h5></div>
-								 <input class="form-control" name="password_usu" type="password" ng-model="usuario.senha"
-								 placeholder="Digite sua Senha de 8 Dígitos!">
-							 
-							 <!-- Bloco de código de formulário -->	 
-							 
-							 <!-- Bloco de código de botão usando Angular JS-->
-							<br> 
-							 <input type="submit" class="btn btn-primary btn-block btn-success"
-							 ng-disabled="!usuario.usuario" value="Fazer Login">
-							 <br>
-							<input type="reset" class="btn btn-primary btn-block btn-danger"
-							value="Limpar campos">
-                             <!-- Bloco de código de Link -->
-							 <br>
-							 <div class="link text-center"><h5>Esqueci a senha!</h5></div>						 
-							 <!-- Bloco de código de Link -->							
-							 </form>
-							 <!-- Bloco de código de botão usando Angular JS-->
-							 </div>
-							 <!-- Bloco de Div com códigos Angular JS -->
-							 
-						</div>
-				</div>
-			 </div>
+                <div class="jumbotron">
+                      <h1><img src="imagens/logo.png" width="30%" /></h1> 
+                      <p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
+                      <!-- Bloco de código de formulário -->	
+                               <!-- Bloco de Div com códigos Angular JS -->		 
+                    <div>	 
+                            <form class="formulario" name="formLogin" method="post" action="userAuthentication.php">
+                                    <div><h5>Usuário</h5></div>
+                                    <input class="form-control" name="usuario_usu" type="text" ng-model="usuario.usuario"
+                                    placeholder="Digite aqui o seu Usuário!" ng-required="true">
+                                    <div><h5>Senha</h5></div>
+                                    <input class="form-control" name="password_usu" type="password" ng-model="usuario.senha"
+                                    placeholder="Digite sua Senha de 8 Dígitos!">
+
+                            <!-- Bloco de código de formulário -->	 
+
+                            <!-- Bloco de código de botão usando Angular JS-->
+                           <br> 
+                            <input type="submit" class="btn btn-primary btn-block btn-success"
+                            ng-disabled="!usuario.usuario" value="Fazer Login">
+                            <br>
+                           <input type="reset" class="btn btn-primary btn-block btn-danger"
+                           value="Limpar campos">
+                            <!-- Bloco de código de Link -->
+                            <br>
+                            <div class="link text-center"><h5>Esqueci a senha!</h5></div>						 
+                            <!-- Bloco de código de Link -->							
+                            </form>
+                            <!-- Bloco de código de botão usando Angular JS-->
+                            </div>
+                            <!-- Bloco de Div com códigos Angular JS -->
+
+                   </div>
+              </div>
+         </div>
          <!-- Bloco de código do Jumbotron  -->		 
 		 
 		 <!-- Bloco de código do Rodapé  -->	
@@ -150,27 +134,8 @@
 					 <p class="navbar-text navbar-right"><i>Powered By PHP, MySql, HTML5, Bootstrap.</i></p>
 			     </div>
 			</div>
-		 <!-- Bloco de código do Rodapé  -->
-		
-		 <!-- jQuery -->
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">x3C/script>')</script>
-
-			<!-- FlexSlider -->
-			<script defer src="js/jquery.flexslider.js"></script>
-			
-			<script>
-			 // Can also be used with $(document).ready()
-			 $(window).load(function() {
-				  $('.flexslider').flexslider({
-					animation: "slide"
-				  });
-				});
-			</script>
-			
-			<!-- FlexSlider -->
-			<!-- jQuery -->
-		 		 
+		 <!-- Bloco de código do Rodapé  -->		
+		 		 		 
 	 <!-- Bloco de código -->  	
  
 	</body>

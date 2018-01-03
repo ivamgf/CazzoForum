@@ -8,7 +8,7 @@
 <html lang="pt-br" ng-app="controllerLogin">
     <head>
 	     <!-- Bloco de Título -->
-	     <title>Login Instrutor</title>
+	     <title>Cadastro de Instrutor</title>
 		 <!-- Bloco de Título -->
 		 
 		 <!-- Bloco de Meta -->
@@ -28,20 +28,20 @@
 		 
 		 <!-- Bloco de Script -->
 		 <script src="angular/angular.min.js"></script>         
-         <script src="bootstrap/js/jquery.min.js"></script>
-         <script src="bootstrap/js/bootstrap.min.js"></script>
+                 <script src="bootstrap/js/jquery.min.js"></script>
+                 <script src="bootstrap/js/bootstrap.min.js"></script>
 		 <script src="jquery/jquery.min.js"></script>
 		 <script src="flexslider/jquery.flexslider.js"></script>		 
 		 <!-- Bloco de Script -->      
 		 
 		 <!-- Bloco de código Angular Js -->
-         <script>
+                 <script>
 		     angular.module("controllerLogin", []);
 			 angular.module("controllerLogin").controller("controllerLogin",
 			 function ($scope){
 			     $scope.app="controllerLogin";
 				 $scope.usuarios = [{usuario:"admin", senha:"password"}];
-             });
+                 });
 		 </script>
 		 <!-- Bloco de código Angular Js -->
 	 
@@ -55,27 +55,12 @@
 			<nav class="navbar navbar-inverse">
 			  <div class="container-fluid">
 				<div class="navbar-header">
-				  <a class="navbar-brand" href="index.html">CazzoForum</a>
+				  <a class="navbar-brand" href="index.php">CazzoForum</a>
 				</div>
 				<ul class="nav navbar-nav">
-				  <li class="active"><a href="index.html">Página Principal</a></li>
+				  <li class="active"><a href="index.php">Página Principal</a></li>
 				  				  
-				  <li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Categorias
-					<span class="caret"></span></a>
-					<ul class="dropdown-menu">
-					  <li><a href="#">Administração</a></li>
-					  <li><a href="#">Desenvolvimento</a></li>
-					  <li><a href="#">Educação</a></li>
-					  <li><a href="#">Informática</a></li>
-					  <li><a href="#">Música</a></li>
-					  <li><a href="#">Negócios</a></li>
-					  <li><a href="#">Religião</a></li>
-					  <li><a href="#">Saúde e Fitness</a></li>
-					  <li><a href="#">Outros</a></li>
-					</ul>
-				  </li>
-				  
+				  				  
 				</ul>
 				<form class="navbar-form navbar-left">
 				  <div class="input-group">
@@ -99,88 +84,96 @@
 	              
          <div class="container">
             <div class="jumbotron">
-			<h1><img src="imagens/logo.jpg" width="30%" /></h1> 
-					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
-			<div class="text-center"><p><h3>CADASTRO DE INSTRUTOR</h3></p></div>
-			 <!-- Tabela -->
+		 <h1><img src="imagens/logo.png" width="30%" /></h1> 
+		 <p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
+		 <div class="text-center"><p><h3>CADASTRO DE INSTRUTOR</h3></p></div>
+		 <!-- Tabela -->
 			
-			<table class="table">
-			   <div class="container col-xs-3 col-sm-3 col-md-12 col-lg-12 text-center">
-                <form class="formulario" 
-                method="post" action="cadPesFis.php">
+		 <table class="table">
+		 <div class="container col-xs-3 col-sm-3 col-md-12 col-lg-12 text-center">
+                 <form class="formulario" method="post" action="cadInstrutor.php">
 				
-				 <!-- Linha 1.1 -->
+		 <!-- Linha 1.1 -->
 				
-				<tr>
-				     <th>Nome do Instrutor</th><th>E-mail</th>
-					
-				</tr>
+		 <tr>
+		     <th>Nome do Instrutor</th><th>E-mail</th>					
+		 </tr>
 				
-				<!-- Linha 1.1 -->
+		 <!-- Linha 1.1 -->
 				
-				<!-- Linha 1.2 -->
+		 <!-- Linha 1.2 -->
 				
-                <tr>
-                
+                 <tr>                
                      <td>
-						 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
-						     <input class="form-control" type="text" name="nome_cdi">
-				         </div>
-					 </td>
-					 <td>					 
-						 <div class="input-group">
-							 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-							 <input class="form-control" type="text" name="email_cdi" id="campoEmailInst">
-						 </div>
-				     </td>
-					 
-				</tr>
+			 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
+			     <input class="form-control" type="text" name="st_nome_cdi" id="campoNome">
+			 </div>
+		     </td>
+		     <td>					 
+			 <div class="input-group">
+			 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+			 <input class="form-control" type="text" name="st_email_cdi" id="campoEmail">
+			 </div>
+		     </td>					 
+		 </tr>
 				
-				<!-- Linha 1.2 -->	
-				
-							
-				<tr>
-				     <th>Usuário</th><th>Senha</th><th></th>
-					
-				</tr>
-				
-				<!-- Linha 1.11 -->
-				
-				<!-- Linha 1.12 -->
-				
-                <tr>
-                
-                     <td>
-						 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
-						     <input class="form-control" type="text" name="usuario_cdi" id="campoUsuarioInst">
-				         </div>
-					 </td>
-					 <td>
-					 <div class="input-group">
-                         <span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-ok-sign"></i></span>
-                         <input class="form-control" type="text" name="senha_cdi" id="campoSenhaInst">
-				     </div>
-					 </td>
-					 
-				</tr>
-				
-				<!-- Linha 1.12-->
-				
-				<!-- Linha 1.13 -->			             
-                
-                <!-- Linha 2 -->				
-            </form>      
-            
-			     </div>
-			   </table>
-			   
-			    <!-- Tabela -->
-			   
-            </div> 
-             <p><br><br><br><br><br></p>			
-        </div>	 
+		 <!-- Linha 1.2 -->	
 		 
-		 <!-- Bloco de código do Rodapé  -->	
+                 <!-- Linha 1.3 -->
+                 
+		 <tr>
+		     <th>Usuário</th><th>Senha</th><th></th>			
+		 </tr>
+                 
+		 <!-- Linha 1.3 -->
+                 
+                 <!-- Linha 1.4 -->
+				
+                 <tr>
+                     <td>
+			 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>					 
+			 <input class="form-control" type="text" name="st_usuario_cdi" id="campoUsuario" maxlength="30">
+			 </div>
+		     </td>
+		     <td>
+		         <div class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-ok-sign"></i></span>
+                         <input class="form-control" type="text" name="st_senha_cdi" id="campoSenha" maxlength="8"
+                                placeholder="Digite uma senha de 8 dígitos">
+			 </div>
+		     </td>
+					 
+		 </tr>
+				
+		 <!-- Linha 1.4-->
+				
+		 <!-- Linha 1.5 -->			             
+                 
+                 <tr>                
+                     <td>
+                     <br> 
+		     <input type="submit" class="btn btn-primary btn-block btn-success" value="Cadastrar">
+		     <br>
+                     </td>
+                     <td>
+                     <br>
+                         <input type="reset" class="btn btn-primary btn-block btn-danger" value="Limpar campos">
+                     </br>
+                     </td>                                       
+                 </tr>  
+                 
+                 <!-- Linha 1.5 -->				
+                 </form>      
+            
+		 </div>
+		 </table>
+			   
+		 <!-- Tabela -->
+			   
+         </div> 
+             <p><br><br><br><br><br></p>			
+         </div>	 		 
+	         <!-- Bloco de código do Rodapé  -->	
 		                
 			<div class="rodape">
 			     <div class="container-fluid"> 
@@ -194,26 +187,7 @@
 					 <p class="navbar-text navbar-right"><i>Powered By PHP, MySql, HTML5, Bootstrap.</i></p>
 			     </div>
 			</div>
-		 <!-- Bloco de código do Rodapé  -->
-		
-		 <!-- jQuery -->
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-			<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">x3C/script>')</script>
-
-			<!-- FlexSlider -->
-			<script defer src="js/jquery.flexslider.js"></script>
-			
-			<script>
-			 // Can also be used with $(document).ready()
-			 $(window).load(function() {
-				  $('.flexslider').flexslider({
-					animation: "slide"
-				  });
-				});
-			</script>
-			
-			<!-- FlexSlider -->
-			<!-- jQuery -->
+		 <!-- Bloco de código do Rodapé  -->	 
 		 		 
 	 <!-- Bloco de código -->  	
  

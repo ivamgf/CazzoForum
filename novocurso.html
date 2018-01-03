@@ -79,6 +79,7 @@
 				  <li><a href="cadAluno.html"><span class="glyphicon glyphicon-user"></span> Cadastrar-se</a></li>
 				  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login de Instrutor</a></li>
 				  <li><a href="loginEad.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                  <li><a href="sairInst.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 				</ul>
 			  </div>		  
 			 </nav>
@@ -88,7 +89,7 @@
          <!-- Bloco de código do Jumbotron  -->	
              <div class="container">
 				  <div class="jumbotron">
-					<h1><img src="imagens/logo.jpg" width="30%" /></h1> 
+					<h1><img src="imagens/logo.png" width="30%" /></h1> 
 					<p>A mais nova plataforma EAD da Web! Realize já a sua matrícula!</p> 
 					
 					<!-- Bloco de código do Painel  -->
@@ -99,7 +100,7 @@
 							     <div class="list-group">
 									  <a href="#" class="list-group-item disabled">Painel de Controle</a>
 									  <a href="dashboard2.html" class="list-group-item">Início</a>
-									  <a href="dashboardPerfil2.html" class="list-group-item">Perfil</a>
+									  <a href="dashboardperfil2.html" class="list-group-item">Perfil</a>
 									  <a href="dashcursos2.html" class="list-group-item">Meus Cursos</a>
 									  <a href="novocurso.html" class="list-group-item">Cadastrar Novo Curso</a>
 									  <a href="dashcertificados2.html" class="list-group-item">Meus Certificados</a>
@@ -121,7 +122,7 @@
 														<!-- Linha 1.1 -->
 														
 														<tr>
-															 <th>Título do Curso</th><th>Curso</th>
+															 <th>Título do Curso</th><th>Descrição do Curso</th>
 															
 														</tr>
 														<!-- Linha 1.1 -->
@@ -135,10 +136,9 @@
 																 </div>
 															 </td>
 															 <td>					 
-																 <div class="input-group">
-																	 <span class="input-group-addon"><i class="glyphicon glyphicon-tag"></i></span>
-																	 <input class="form-control" type="text" name="st_curso_cur" id="campoCurso">
-																 </div>
+															 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>					 
+																	 <input class="form-control" type="text" name="st_descricao_cur" id="campoDescricao">
+														         </div>	 
 															 </td>
 															 
 														</tr>				
@@ -147,7 +147,7 @@
 														<!-- Linha 1.3 -->
 														
 														<tr>
-															 <th>Descrição do Curso</th><th>Publico</th>
+															 <th>Publico</th><th>Preço</th>
 															
 														</tr>
 														<!-- Linha 1.3 -->
@@ -157,47 +157,51 @@
 														
 															 <td>
 														         <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>					 
-																	 <input class="form-control" type="text" name="st_descricao_cur" id="campoDescricao">
+																	 <input class="form-control" type="text" name="st_publico_cur" id="campoPublico">
 																 </div>
 															 </td>
-															 <td>					 
-																 <div class="input-group">
-																	 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-																	 <input class="form-control" type="text" name="st_curso_cur" id="campoPublico">
-																 </div>
+															 <td>
+                                                                                                                              <div class="form-group">                                                                                                                  
+                                                                                                                                <select class="form-control" id="valor1" name="valor">
+                                                                                                                                    <option value="0"> --- </option>    
+                                                                                                                                        <option value="00">Gratuito</option>
+                                                                                                                                        <option value="25">R$ 25.00</option>
+                                                                                                                                        <option value="30">R$ 30.00</option>
+                                                                                                                                        <option value="35">R$ 35.00</option>
+                                                                                                                                        <option value="40">R$ 40.00</option>
+                                                                                                                                        <option value="45">R$ 45.00</option>
+                                                                                                                                        <option value="50">R$ 50.00</option>
+                                                                                                                                        <option value="55">R$ 55.00</option>
+                                                                                                                                        <option value="60">R$ 60.00</option>
+                                                                                                                                        <option value="65">R$ 65.00</option>
+                                                                                                                                        <option value="70">R$ 70.00</option>
+                                                                                                                                        <option value="75">R$ 75.00</option>
+                                                                                                                                        <option value="80">R$ 80.00</option>
+                                                                                                                                        <option value="85">R$ 85.00</option>
+                                                                                                                                        <option value="90">R$ 90.00</option>
+                                                                                                                                        <option value="95">R$ 95.00</option>
+                                                                                                                                        <option value="100">R$ 100.00</option>
+                                                                                                                                        <option value="105">R$ 105.00</option>
+                                                                                                                                        <option value="110">R$ 110.00</option>
+                                                                                                                                </select>
+                                                                                                                              </div>                                                                                                                          
+															     	 
 															 </td>
 															 
 														</tr>				
 														<!-- Linha 1.4 -->
 														
 														<!-- Linha 1.5 -->
-														
+															                                                         			
 														<tr>
-															 <th>Preço</th><th></th>
-															
-														</tr>
-														<!-- Linha 1.5 -->
-														
-														<!-- Linha 1.6 -->				
-														<tr>
-														
 															 <td>
-														         <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>					 
-																	 <input class="form-control" type="text" name="nu_valor_cur" id="campoPreco">
-																 </div>
-															 </td>
-															 <td>					 
-																 
-															 </td>
-															 
-														</tr>				
-														<!-- Linha 1.6 -->
-														
-														<!-- Linha 1.7 -->	                                                         			
-														<tr>
-															 <th><button type="submit" class="btn btn-danger">Cadastrar Curso</button></th><th></th><th></th>															
-														</tr>				
-														<!-- Linha 1.7 -->
+                                                                                                                             <button type="submit" class="btn btn-danger">Cadastrar Curso</button>
+                                                                                                                         </td>	
+                                                                                                                         <td>
+                                                                                                                             <input type="reset" class="btn btn-primary btn-block btn-danger" value="Limpar campos">
+                                                                                                                         </td>														                                                                                                                        
+                                                                                                                </tr>
+														<!-- Linha 1.5 -->
 														
                                                              </form>
                                                          </div>
